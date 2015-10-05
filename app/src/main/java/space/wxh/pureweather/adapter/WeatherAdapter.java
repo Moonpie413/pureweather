@@ -1,6 +1,7 @@
 package space.wxh.pureweather.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import space.wxh.pureweather.R;
+import space.wxh.pureweather.activity.MainActivity;
 
 /**
  * Created by howord on 15-10-4.
@@ -40,6 +42,11 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mTextView.setText(mData.get(position));
+        holder.mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
     }
 
     @Override
